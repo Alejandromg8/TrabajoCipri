@@ -28,6 +28,8 @@ public class UserService {
 		return users;
 	}
 	
+	// Encontrar el usuario por su id
+	
 	public User findById(Long id){
 		User found = null;
 		for(User user: users) {
@@ -39,11 +41,16 @@ public class UserService {
 		return found;
 	}
 	
+	
+	// Crea un usuario
+	
 	public User createUser(User user){
 		users.add(user);
 		return user;
 	}
 	
+	// Elimina un usuario por el id
+
 	public boolean deleteUserById(Long id) {
 		User user = this.findById(id);
 		return users.remove(user);
